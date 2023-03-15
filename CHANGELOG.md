@@ -32,10 +32,10 @@ For example, given you created a `FooManager.js` file to be associated with a `f
 you should add to index, after `const models = {}` statement:
 
 ```js
-const FooManager = require("./FooManager");
+const FooManager = require('./FooManager')
 
-models.foo = new FooManager();
-models.foo.setDatabase(pool);
+models.foo = new FooManager()
+models.foo.setDatabase(pool)
 ```
 
 - **Breaking change:** renamed `connection` property of managers as `database` to be consistent with quests.
