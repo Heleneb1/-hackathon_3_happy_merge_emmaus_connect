@@ -1,8 +1,9 @@
 import { useState } from "react";
 
-function ModalAntutu({ setOpenModal }) {
+function ModalAntutu() {
   const [inputValue, setInputValue] = useState("");
   const [valA, setValA] = useState("");
+  const setOpenModal = true;
   const intervallesIndice = [
     { min: 0, max: 50000, valA: 40 },
     { min: 50000, max: 100000, valA: 44 },
