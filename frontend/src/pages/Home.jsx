@@ -72,7 +72,7 @@ export default function Home() {
         </div>
         <div className="valider">
           <Link to="/calculatrice">
-            <input type="submit" className="validButton" value="Connexion" />
+            <input type="submit" className="validButton" value="Valeurs" />
           </Link>
         </div>
         <p className="access">

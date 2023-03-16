@@ -1,0 +1,179 @@
+$gray: #777777;
+$black: #070707;
+$green: #00acb0;
+$aqua: #3fb6a8;
+$white: #ffffff;
+$onyx: #373449;
+
+$montserrat: "Barlow-Regular.ttf", sans-serif;
+$roboto: "Roboto", sans-serif;
+
+.container {
+  background: linear-gradient(-45deg, rgba($white, 0.55), rgba($white, 0.1));
+  width: 1300px;
+  height: 700px;
+  position: relative;
+  margin: auto auto;
+  margin-top: 5%;
+  border-radius: 5px;
+  box-shadow: 2px 4px 6px rgba($onyx, 0.4), inset -2px -2px 4px rgba($white, 1);
+}
+
+.leftbox {
+  background: rgba($green, 0.6);
+  float: left;
+  position: relative;
+  width: 15%;
+  height: 114%;
+  border: 1px solid rgba($green, 0.45);
+  border-radius: 3px;
+  box-shadow: 2px 4px 6px rgba($onyx, 0.4),
+    inset -2px -2px 4px rgba(lighten($green, 28%), 0.7);
+  top: -6.45%;
+  left: 5%;
+  nav {
+    .active {
+      color: darken($aqua, 15%);
+    }
+    a {
+      color: darken($white, 5%);
+      font-size: 1.45em;
+      display: block;
+      padding: 30px;
+      align-items: center;
+      text-align: center;
+      transition: all 0.4s ease-in-out;
+      &:hover {
+        color: darken($aqua, 15%);
+        transform: scale(1.2);
+        cursor: pointer;
+      }
+    }
+  }
+}
+
+@mixin cards {
+  transition: opacity 0.5s ease-in;
+  position: absolute;
+  width: 70%;
+  h1 {
+    font-family: $montserrat;
+    color: darken($green, 20%);
+    font-size: 1.2em;
+    margin-top: 40px;
+    margin-bottom: 35px;
+  }
+  h2 {
+    text-transform: uppercase;
+    font-family: $roboto;
+    color: darken($gray, 15%);
+    font-size: 0.6em;
+    letter-spacing: 1px;
+    width: 80%;
+  }
+  p {
+    width: 90%;
+    font-family: $montserrat;
+    font-size: 0.65em;
+    letter-spacing: 1px;
+    border-width: 1px;
+    border-style: solid;
+    border-image: linear-gradient(
+        to right,
+        lighten($aqua, 0%),
+        lighten(rgba($green, 0.9), 10%)
+      )
+      1 0%;
+    border-top: none;
+    padding: 7px 0;
+    color: darken($white, 0%);
+    input {
+      border: none;
+      font-family: $montserrat;
+      font-size: 1.12em;
+      background: none;
+      color: $white;
+      &:focus {
+        outline: none;
+      }
+    }
+    ::placeholder {
+      color: $white;
+    }
+  }
+
+  //   button {
+  //     float: right;
+  //     font-family: $roboto;
+  //     text-transform: uppercase;
+  //     font-size: 10px;
+  //     padding: 1px;
+  //     border: none;
+  //     color: darken($aqua, 20%);
+  //     background: none;
+  //     &:hover {
+  //       font-weight: 900;
+  //     }
+  //   }
+}
+
+#btn1,
+#btn2,
+#btn3,
+#btn4,
+#btn5 {
+  position: relative;
+  left: -38px;
+  width: 275px;
+  height: 68px;
+  border-radius: 40px;
+  border: none;
+  background: linear-gradient(#00acb0, rgba(13, 78, 79, 5));
+  color: white;
+  font-size: 32px;
+  font-family: "Barlow-Regular.ttf", sans-serif;
+  margin-bottom: 10px;
+}
+
+#btn1 {
+  top: 80px;
+}
+
+#btn2 {
+  top: 120px;
+}
+
+#btn3 {
+  top: 160px;
+}
+
+#btn4 {
+  top: 200px;
+}
+
+#btn5 {
+  top: 240px;
+}
+
+#btn1:hover {
+  transform: translatey(2px);
+  box-shadow: none;
+  cursor: pointer;
+  background: linear-gradient(180deg, #233d8d 0%, rgba(35, 61, 141, 0.5) 100%);
+}
+
+.rightbox {
+  float: right;
+  padding: 10px 20px;
+  width: 70%;
+  .noshow {
+    display: none;
+  }
+  .profile,
+  .payment,
+  .subscription,
+  .privacy,
+  .settings {
+    @include cards;
+  }
+}
