@@ -1,9 +1,9 @@
 import { useForm } from "react-hook-form";
-import Header from "@components/Header";
+import Header from "../components/Header";
 
 function Tableau() {
   const { register, handleSubmit } = useForm();
-  const onSubmit = (data) => console.log(data);
+  //const onSubmit = (data) => console.log(data);
 
   return (
     <div>
