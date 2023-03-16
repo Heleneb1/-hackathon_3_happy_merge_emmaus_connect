@@ -3,12 +3,12 @@ import Header from "../components/Header";
 
 function Tableau() {
   const { register, handleSubmit } = useForm();
-  //const onSubmit = (data) => console.log(data);
+  const onSubmit = (data) => console.log(data);
 
   return (
     <div>
       <Header />
-      <div className="Global">
+      <div className="GlobalT">
         <div className="containerTableau">
           <form className="containerForm" onSubmit={handleSubmit(onSubmit)}>
             <input
