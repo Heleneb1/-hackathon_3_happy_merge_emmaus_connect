@@ -1,7 +1,7 @@
 const models = require("../models");
 
 const browse = (req, res) => {
-  models.indice_Antutu
+  models.indiceantutu
     .findAll()
     .then(([rows]) => {
       res.send(rows);
@@ -13,7 +13,7 @@ const browse = (req, res) => {
 };
 
 const read = (req, res) => {
-  models.indice_Antutu
+  models.indiceantutu
     .find(req.params.id)
     .then(([rows]) => {
       if (rows[0] == null) {
@@ -35,8 +35,8 @@ const edit = (req, res) => {
 
   indiceAntutu.id = parseInt(req.params.id, 10);
 
-  models.indice_Antutu
-    .update(indiceAntutu)
+  models.indiceantutu
+    .update()
     .then(([result]) => {
       if (result.affectedRows === 0) {
         res.sendStatus(404);
@@ -51,12 +51,12 @@ const edit = (req, res) => {
 };
 
 const add = (req, res) => {
-  const indiceAntutu = req.body;
+  const indiceantutu = req.body;
 
   // TODO validations (length, format...)
 
-  models.indice_Antutu
-    .insert(indiceAntutu)
+  models.indiceantutu
+    .insert(indiceantutu)
     .then(([result]) => {
       res.location(`/items/${result.insertId}`).sendStatus(201);
     })
@@ -67,7 +67,7 @@ const add = (req, res) => {
 };
 
 const destroy = (req, res) => {
-  models.indice_Antutu
+  models.indiceantutu
     .delete(req.params.id)
     .then(([result]) => {
       if (result.affectedRows === 0) {

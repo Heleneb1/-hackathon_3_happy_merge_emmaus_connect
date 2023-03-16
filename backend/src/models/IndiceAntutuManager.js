@@ -1,23 +1,28 @@
 const AbstractManager = require("./AbstractManager");
 
-class IndiceAntutuManager extends AbstractManager {
+class IndiceAntutu extends AbstractManager {
   constructor() {
-    super({ table: "indice_Antutu" });
+    super({ table: "indiceantutu" });
   }
 
-  insert(indiceAntutu) {
+  insert(indiceantutu) {
     return this.database.query(
-      `insert into ${this.table} (ant_min, ant_max, valA) values (?, ?, ?)`,
-      [indiceAntutu.ant_min, indiceAntutu.ant_max, indiceAntutu.valA]
+      `insert into ${this.table} (ant_min, ant_max, valA) values (?,?,?)`,
+      [indiceantutu.ant_min, indiceantutu.ant_max, indiceantutu.valA]
     );
   }
 
-  update(indiceAntutu) {
+  update(indiceantutu) {
     return this.database.query(
-      `update ${this.table} set ant_min = ?, ant_max = ? where id = ?`,
-      [indiceAntutu.ant_min, indiceAntutu.ant_max, indiceAntutu.valA]
+      `update ${this.table} set ant_min = ? , ant_max = ? , valA = ?  where id = ?`,
+      [
+        indiceantutu.ant_min,
+        indiceantutu.ant_max,
+        indiceantutu.valA,
+        indiceantutu.id,
+      ]
     );
   }
 }
 
-module.exports = IndiceAntutuManager;
+module.exports = IndiceAntutu;
