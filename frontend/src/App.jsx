@@ -1,9 +1,9 @@
 import { Routes, Route } from "react-router-dom";
 import Home from "./pages/Home";
 import Calculatrice from "./pages/Calculatrice";
+import ListPhones from "./pages/ListPhones";
 
 import "./App.scss";
-import ListPhones from "@pages/ListPhones";
 
 function App() {
   return (
