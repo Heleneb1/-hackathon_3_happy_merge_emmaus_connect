@@ -25,19 +25,23 @@ export default function ListPhones() {
           <input type="submit" className="listExportButton" value="Export" />
           <div className="tableList">
             <div className="tableList-header">
-              <div className="headerList-item">ID</div>
-              <div className="headerList-item">IMEI</div>
-              <div className="headerList-item">Donateur</div>
               <div className="headerList-item">Marque</div>
               <div className="headerList-item">Modèle</div>
+              <div className="headerList-item">RAM</div>
+              <div className="headerList-item">Stockage</div>
+              <div className="headerList-item">Ecran</div>
+              <div className="headerList-item">Etat</div>
+              <div className="headerList-item">Categorie</div>
             </div>
             {data.map((row) => (
               <div key={row.id} className="tableList-row">
-                <div className="rowList-item">{row.id}</div>
-                <div className="rowList-item">{row.imei}</div>
-                <div className="rowList-item">{row.donateur}</div>
                 <div className="rowList-item">{row.marque}</div>
                 <div className="rowList-item">{row.modele}</div>
+                <div className="rowList-item">{row.ram}</div>
+                <div className="rowList-item">{row.stockage}</div>
+                <div className="rowList-item">{row.taille_ecran}</div>
+                <div className="rowList-item">{row.etat}</div>
+                <div className="rowList-item">{row.categorie}</div>
               </div>
             ))}
           </div>
