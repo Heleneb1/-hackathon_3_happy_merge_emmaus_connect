@@ -1,7 +1,7 @@
 const models = require("../models");
 
 const browse = (req, res) => {
-  models.phone
+  models.config_minimale
     .findAll()
     .then(([rows]) => {
       res.send(rows);
@@ -13,7 +13,7 @@ const browse = (req, res) => {
 };
 
 const read = (req, res) => {
-  models.phone
+  models.config_minimale
     .find(req.params.id)
     .then(([rows]) => {
       if (rows[0] == null) {
@@ -29,14 +29,14 @@ const read = (req, res) => {
 };
 
 const edit = (req, res) => {
-  const phone = req.body;
+  const configMinimale = req.body;
 
   // TODO validations (length, format...)
 
-  phone.id = parseInt(req.params.id, 10);
+  configMinimale.id = parseInt(req.params.id, 10);
 
-  models.phone
-    .update(phone)
+  models.config_minimale
+    .update(configMinimale)
     .then(([result]) => {
       if (result.affectedRows === 0) {
         res.sendStatus(404);
@@ -51,12 +51,12 @@ const edit = (req, res) => {
 };
 
 const add = (req, res) => {
-  const phone = req.body;
+  const configMinimale = req.body;
 
   // TODO validations (length, format...)
 
-  models.phone
-    .insert(phone)
+  models.config_minimale
+    .insert(configMinimale)
     .then(([result]) => {
       res.location(`/items/${result.insertId}`).sendStatus(201);
     })
@@ -67,7 +67,7 @@ const add = (req, res) => {
 };
 
 const destroy = (req, res) => {
-  models.phone
+  models.config_minimale
     .delete(req.params.id)
     .then(([result]) => {
       if (result.affectedRows === 0) {

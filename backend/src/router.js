@@ -8,6 +8,8 @@ const ramControllers = require("./controllers/ramControllers");
 const stockageControllers = require("./controllers/stockageControllers");
 const indiceAntutuControllers = require("./controllers/indiceAntutuControllers");
 const etatControllers = require("./controllers/etatControllers");
+const configMinimaleControllers = require("./controllers/configMinimaleControllers");
+const ponderationControllers = require("./controllers/ponderationControllers");
 
 router.get("/items", itemControllers.browse);
 router.get("/items/:id", itemControllers.read);
@@ -44,5 +46,17 @@ router.get("/etat/:id", etatControllers.read);
 router.put("/etat/:id", etatControllers.edit);
 router.post("/etat", etatControllers.add);
 router.delete("/etat/:id", etatControllers.destroy);
+
+router.get("/config_minimale", configMinimaleControllers.browse);
+router.get("/config_minimale/:id", configMinimaleControllers.read);
+router.put("/config_minimale/:id", configMinimaleControllers.edit);
+router.post("/config_minimale", configMinimaleControllers.add);
+router.delete("/config_minimale/:id", configMinimaleControllers.destroy);
+
+router.get("/ponderation", ponderationControllers.browse);
+router.get("/ponderation/:id", ponderationControllers.read);
+router.put("/ponderation/:id", ponderationControllers.edit);
+router.post("/ponderation", ponderationControllers.add);
+router.delete("/ponderation/:id", ponderationControllers.destroy);
 
 module.exports = router;
