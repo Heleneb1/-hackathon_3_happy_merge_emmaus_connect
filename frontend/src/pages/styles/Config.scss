@@ -1,5 +1,4 @@
 $gray: #777777;
-$black: #070707;
 $green: #00acb0;
 $aqua: #3fb6a8;
 $white: #ffffff;
@@ -11,7 +10,7 @@ $roboto: "Roboto", sans-serif;
 .container {
   background: linear-gradient(-45deg, rgba($white, 0.55), rgba($white, 0.1));
   width: 1300px;
-  height: 700px;
+  height: 640px;
   position: relative;
   margin: auto auto;
   margin-top: 5%;
@@ -52,70 +51,27 @@ $roboto: "Roboto", sans-serif;
   }
 }
 
-@mixin cards {
-  transition: opacity 0.5s ease-in;
-  position: absolute;
-  width: 70%;
-  h1 {
-    font-family: $montserrat;
-    color: darken($green, 20%);
-    font-size: 1.2em;
-    margin-top: 40px;
-    margin-bottom: 35px;
-  }
-  h2 {
-    text-transform: uppercase;
-    font-family: $roboto;
-    color: darken($gray, 15%);
-    font-size: 0.6em;
-    letter-spacing: 1px;
-    width: 80%;
-  }
-  p {
-    width: 90%;
-    font-family: $montserrat;
-    font-size: 0.65em;
-    letter-spacing: 1px;
-    border-width: 1px;
-    border-style: solid;
-    border-image: linear-gradient(
-        to right,
-        lighten($aqua, 0%),
-        lighten(rgba($green, 0.9), 10%)
-      )
-      1 0%;
-    border-top: none;
-    padding: 7px 0;
-    color: darken($white, 0%);
-    input {
-      border: none;
-      font-family: $montserrat;
-      font-size: 1.12em;
-      background: none;
-      color: $white;
-      &:focus {
-        outline: none;
-      }
-    }
-    ::placeholder {
-      color: $white;
-    }
-  }
-
-  //   button {
-  //     float: right;
-  //     font-family: $roboto;
-  //     text-transform: uppercase;
-  //     font-size: 10px;
-  //     padding: 1px;
-  //     border: none;
-  //     color: darken($aqua, 20%);
-  //     background: none;
-  //     &:hover {
-  //       font-weight: 900;
-  //     }
-  //   }
+h1 {
+  font-family: $montserrat;
+  color: darken($green, 15%);
+  font-size: 2em;
+  margin-top: 40px;
+  margin-bottom: 35px;
 }
+
+//   button {
+//     float: right;
+//     font-family: $roboto;
+//     text-transform: uppercase;
+//     font-size: 10px;
+//     padding: 1px;
+//     border: none;
+//     color: darken($aqua, 20%);
+//     background: none;
+//     &:hover {
+//       font-weight: 900;
+//     }
+//   }
 
 #btn1,
 #btn2,
@@ -155,7 +111,11 @@ $roboto: "Roboto", sans-serif;
   top: 240px;
 }
 
-#btn1:hover {
+#btn1:hover,
+#btn2:hover,
+#btn3:hover,
+#btn4:hover,
+#btn5:hover {
   transform: translatey(2px);
   box-shadow: none;
   cursor: pointer;
@@ -168,12 +128,5 @@ $roboto: "Roboto", sans-serif;
   width: 70%;
   .noshow {
     display: none;
-  }
-  .profile,
-  .payment,
-  .subscription,
-  .privacy,
-  .settings {
-    @include cards;
   }
 }
