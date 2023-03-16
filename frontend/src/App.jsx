@@ -1,19 +1,23 @@
 import { Routes, Route } from "react-router-dom";
-import Header from "./components/Header";
 import Home from "./pages/Home";
-import Calculatrice from "./pages/Calculatrice";
 import Tableau from "./pages/Tableau";
+import Calculatrice from "./pages/Calculatrice";
+import Config from "./pages/Config";
+import Guide from "./pages/Guide";
+import ListPhones from "./pages/ListPhones";
 
 import "./App.scss";
 
 function App() {
   return (
     <div className="App">
-      <Header />
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/calculatrice" element={<Calculatrice />} />
         <Route path="/tableau" element={<Tableau />} />
+        <Route path="/configuration" element={<Config />} />
+        <Route path="/guide" element={<Guide />} />
+        <Route path="/phones" element={<ListPhones />} />
       </Routes>
     </div>
   );
