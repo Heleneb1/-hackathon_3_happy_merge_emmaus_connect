@@ -35,6 +35,8 @@ const RamManager = require("./RamManager");
 const StockageManager = require("./StockageManager");
 const IndiceAntutuManager = require("./IndiceAntutuManager");
 const EtatManager = require("./EtatManager");
+const ConfigminManager = require("./ConfigminManager");
+const CategoriesManager = require("./CategoriesManager");
 
 // models.item = new ItemManager();
 // models.item.setDatabase(pool);
@@ -48,11 +50,14 @@ models.ram.setDatabase(pool);
 models.stockage = new StockageManager();
 models.stockage.setDatabase(pool);
 
-models.indice_Antutu = new IndiceAntutuManager();
-models.indice_Antutu.setDatabase(pool);
+models.categorie = new CategoriesManager();
+models.categorie.setDatabase(pool);
 
 models.etat = new EtatManager();
 models.etat.setDatabase(pool);
+
+models.configmin = new ConfigminManager();
+models.configmin.setDatabase(pool);
 
 // bonus: use a proxy to personalize error message,
 // when asking for a non existing model

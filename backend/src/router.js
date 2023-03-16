@@ -8,6 +8,8 @@ const ramControllers = require("./controllers/ramControllers");
 const stockageControllers = require("./controllers/stockageControllers");
 const indiceAntutuControllers = require("./controllers/indiceAntutuControllers");
 const etatControllers = require("./controllers/etatControllers");
+const configminControllers = require("./controllers/configMinControllers");
+const categoriesControllers = require("./controllers/categoriesControllers");
 
 router.get("/indiceAntutu", indiceAntutuControllers.browse);
 router.get("/indiceAntutu/:id", indiceAntutuControllers.read);
@@ -38,5 +40,17 @@ router.get("/etat/:id", etatControllers.read);
 router.put("/etat/:id", etatControllers.edit);
 router.post("/etat", etatControllers.add);
 router.delete("/etat/:id", etatControllers.destroy);
+
+router.get("/configmin", configminControllers.browse);
+router.get("/configmin/:id", configminControllers.read);
+router.put("/configmin/:id", configminControllers.edit);
+router.post("/configmin", configminControllers.add);
+router.delete("/configmin/:id", configminControllers.destroy);
+
+router.get("/categories", categoriesControllers.browse);
+router.get("/categories/:id", categoriesControllers.read);
+router.put("/categories/:id", categoriesControllers.edit);
+router.post("/categories", categoriesControllers.add);
+router.delete("/categories/:id", categoriesControllers.destroy);
 
 module.exports = router;

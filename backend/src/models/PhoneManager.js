@@ -7,7 +7,7 @@ class PhoneManager extends AbstractManager {
 
   insert(phone) {
     return this.database.query(
-      `insert into ${this.table} (marque, modele, marque, stockage, indice_Ant, ponderation, id_emmaus_connect, donateur, imei, taille_ecran, version_android, reseau, etat, categorie) values (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)`,
+      `insert into ${this.table} (marque, modele, ram, stockage, indice_Ant, ponderation, id_emmaus_connect, donateur, imei, taille_ecran, version_android, reseau, etat, categorie) values (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)`,
       [
         phone.marque,
         phone.modele,
@@ -29,11 +29,11 @@ class PhoneManager extends AbstractManager {
 
   update(phone) {
     return this.database.query(
-      `update ${this.table} set marque = ?, modele = ?, marque = ?, stockage = ?, indice_Ant = ?, ponderation = ?, id_emmaus_connect = ?, donateur = ?, imei = ?, taille_ecran = ?, version_android = ?, reseau = ?, etat = ?, categorie = ? where id = ?`,
+      `update ${this.table} set marque = ?, modele = ?, ram = ?, stockage = ?, indice_Ant = ?, ponderation = ?, id_emmaus_connect = ?, donateur = ?, imei = ?, taille_ecran = ?, version_android = ?, reseau = ?, etat = ?, categorie = ? where id = ?`,
       [
         phone.marque,
         phone.modele,
-        phone.marque,
+        phone.ram,
         phone.stockage,
         phone.indice_Ant,
         phone.ponderation,
@@ -45,6 +45,7 @@ class PhoneManager extends AbstractManager {
         phone.reseau,
         phone.etat,
         phone.categorie,
+        phone.id,
       ]
     );
   }
