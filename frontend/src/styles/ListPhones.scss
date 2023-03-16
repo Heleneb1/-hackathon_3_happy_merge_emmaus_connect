@@ -1,0 +1,90 @@
+.divListPhones {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 30px 0px;
+}
+.divListTable {
+  width: 85vw;
+  height: auto;
+  backdrop-filter: blur(16px) saturate(180%);
+  -webkit-backdrop-filter: blur(16px) saturate(180%);
+  background-color: rgba(190, 186, 186, 0.275);
+  border: 3px solid #00acb0;
+  border-radius: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  h1 {
+    display: flex;
+    justify-content: center;
+    color: #00acb0;
+    font-family: "Barlow-Regular.ttf", sans-serif;
+    font-size: 28px;
+    padding-top: 20px;
+  }
+}
+.listExportButton {
+  width: 100px;
+  height: 30px;
+  border-radius: 40px;
+  border: none;
+  background: linear-gradient(#00acb0, #00adb075);
+  color: white;
+  font-size: 18px;
+  font-family: "Barlow-Regular.ttf", sans-serif;
+  margin-bottom: 15px;
+}
+.tableList {
+  display: flex;
+  flex-direction: column;
+  width: 95%;
+  margin-bottom: 30px;
+}
+
+.tableList-header,
+.tableList-row {
+  display: flex;
+  box-sizing: border-box;
+  min-width: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.tableList-row {
+  margin: 0px 18px;
+}
+.tableList-header {
+  font-weight: bold;
+  background-color: #00acb0;
+  border-radius: 30px;
+  padding: 5px;
+  margin-bottom: 10px;
+}
+.headerList-item {
+  flex: 1;
+  padding: 5px;
+  text-align: center;
+  box-sizing: border-box;
+  min-width: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  background-color: white;
+  border: 2px solid #233d8d;
+  margin: 10px;
+  border-radius: 20px;
+}
+.rowList-item {
+  flex: 1;
+  padding: 10px;
+  margin: 6px 0px;
+  border: 1px solid #ccc;
+  background-color: white;
+  text-align: left;
+  box-sizing: border-box;
+  min-width: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
