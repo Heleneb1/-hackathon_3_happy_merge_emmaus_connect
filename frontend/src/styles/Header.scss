@@ -1,0 +1,31 @@
+.mainDivHeader {
+  background-color: #00acb0;
+  height: 5vh;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  z-index: 999;
+}
+.firstDivHeader {
+  display: flex;
+}
+.secondDivHeader {
+  display: flex;
+}
+.divItemNav {
+  padding: 0px 20px;
+  color: white;
+  font-weight: bold;
+  font-size: 1em;
+}
+.linkNavHeader {
+  text-decoration: none;
+}
+.linkNavHeader:hover {
+  transform: scale(1.1);
+}
+@media (max-width: 560px) {
+  .divItemNav {
+    padding: 0px 15px;
+  }
+}
