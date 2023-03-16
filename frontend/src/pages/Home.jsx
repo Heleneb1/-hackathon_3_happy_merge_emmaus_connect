@@ -1,6 +1,10 @@
+import { Link } from "react-router-dom";
 import emmauslogo from "../assets/emmaus.png";
 
 export default function Home() {
+  // const handleClick = () => {
+  //   alert("Un email vous a été envoyé pour générer un nouveau mot de passe");
+  // };
   return (
     <div className="homeBody">
       <div className="background">
@@ -58,19 +62,27 @@ export default function Home() {
           <img src={emmauslogo} alt="logo emmaus" />
         </div>
       </div>
-
       <div className="form">
-        <h2>Sign up</h2>
-        <input type="email" placeholder="Adresse mail" />
-        <input type="password" placeholder="Mot de passe" />
-        <div className="valider">
-          <input type="submit" className="validButton" value="Valider" />
+        <h2>Bienvenue</h2>
+        <div className="label">
+          <input type="email" placeholder="Adresse mail" />
         </div>
-        <p className="access">Demande d'accès</p>
+        <div className="label">
+          <input type="password" placeholder="Mot de passe" className="label" />
+        </div>
+        <div className="valider">
+          <Link to="/calculatrice">
+            <input type="submit" className="validButton" value="Connexion" />
+          </Link>
+        </div>
+        <p className="access">
+          {/* onClick={handleClick} */}
+          Mot de passe oublié ?
+        </p>
       </div>
-      <div className="circle" />
+      {/* <div className="circle" />
       <div className="circle-1" />
-      <div className="circle-2" />
+      <div className="circle-2" /> */}
     </div>
   );
 }
