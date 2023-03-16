@@ -1,3 +1,6 @@
+.mainDivList {
+  font-family: "Barlow-Regular.ttf", sans-serif;
+}
 .divListPhones {
   display: flex;
   flex-direction: column;
@@ -21,25 +24,31 @@
     color: #00acb0;
     font-family: "Barlow-Regular.ttf", sans-serif;
     font-size: 28px;
-    padding-top: 20px;
+    padding: 20px;
   }
 }
-.listExportButton {
-  width: 100px;
-  height: 30px;
-  border-radius: 40px;
-  border: none;
-  background: linear-gradient(#3b56a8, #082270);
-  color: white;
-  font-size: 18px;
-  font-family: "Barlow-Regular.ttf", sans-serif;
+.filterPhonesContainer {
+  position: relative;
+  display: inline-block;
+}
+
+.categoryFilterPhones {
+  appearance: none;
+  border: 3px solid #00acb0;
+  border-radius: 20px;
+  background-color: #fff;
+  padding: 8px;
+  width: 200px;
+  box-sizing: border-box;
   margin-bottom: 15px;
 }
-.listExportButton:hover {
-  transform: scale(1.05);
-  box-shadow: 1px 1px 1px 1px rgb(52, 51, 51);
-  transition: all 0.3s;
+
+.selectArrow {
+  position: relative;
+  left: 170px;
+  bottom: 40px;
 }
+
 .tableList {
   display: flex;
   flex-direction: column;
@@ -87,6 +96,7 @@
   border: 2px solid #233d8d;
   margin: 10px;
   border-radius: 20px;
+  color: #233d8d;
 }
 .rowList-item {
   flex: 1;
@@ -100,4 +110,20 @@
   background-color: white;
   margin: 10px;
   border-radius: 20px;
+}
+.listExportButton {
+  width: 100px;
+  height: 30px;
+  border-radius: 40px;
+  border: none;
+  background: linear-gradient(#3b56a8, #082270);
+  color: white;
+  font-size: 18px;
+  font-family: "Barlow-Regular.ttf", sans-serif;
+  margin-bottom: 15px;
+}
+.listExportButton:hover {
+  transform: scale(1.05);
+  box-shadow: 1px 1px 1px 1px rgb(52, 51, 51);
+  transition: all 0.3s;
 }
