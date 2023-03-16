@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
 import axios from "axios";
 import Header from "../components/Header";
 import emmauslogo from "../assets/emmaus.png";
@@ -144,7 +145,7 @@ export default function Calculatrice() {
           <form className="calculateForm" onSubmit={handleSubmit}>
             <label>
               <select
-                className="ram"
+                className="selectInput"
                 onChange={(e) => setMemInputValue(e.target.value)}
               >
                 {valeurMemoire.map((vm) => {
@@ -155,7 +156,7 @@ export default function Calculatrice() {
             </label>
             <label>
               <select
-                className="Stokage"
+                className="selectInput"
                 onChange={(e) => setStockInputValue(e.target.value)}
               >
                 {valeurStockage.map((vs) => {
@@ -166,6 +167,7 @@ export default function Calculatrice() {
             </label>
             <label>
               <input
+                className="selectInput"
                 type="text"
                 placeholder="Indice Antutu"
                 value={AntinputValue}
@@ -174,7 +176,7 @@ export default function Calculatrice() {
             </label>
             <label>
               <select
-                className="ponderation"
+                className="selectInput"
                 onChange={(e) => setPondeInputValue(e.target.value)}
               >
                 {valeurPonderation.map((vp) => {
@@ -184,7 +186,9 @@ export default function Calculatrice() {
               {/* {pondeInputValue} */}
             </label>
             <div className="valider">
-              <input type="submit" className="validButton" value="Valider" />
+              <Link to="/tableau">
+                <input type="submit" className="validButton" value="Valider" />
+              </Link>
             </div>
           </form>
           {/* <div className="resultContainer">{valA && <p>ValA: {valA}</p>}</div> */}

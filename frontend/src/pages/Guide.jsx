@@ -48,7 +48,7 @@ export default function Guide() {
                 Après validation de cette seconde étape, vous allez voir
                 s'afficher un tableau récapitulatif des différentes
                 caractéristiques précédemment saisies. Le bouton "export" permet
-                de remplir la base de données avec les informations aue vous
+                de remplir la base de données avec les informations que vous
                 aurez saisies.
               </li>{" "}
             </div>

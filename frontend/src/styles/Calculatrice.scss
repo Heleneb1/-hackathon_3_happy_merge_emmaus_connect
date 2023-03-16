@@ -12,7 +12,7 @@
       height: 201px;
       position: relative;
       top: 61px;
-      left: 560px;
+      left: 760px;
     }
   }
 
@@ -50,9 +50,9 @@
         padding-top: 10px;
         padding-bottom: 30px;
 
-        select {
+        .selectInput {
           width: 400px;
-          height: 20px;
+          height: 30px;
           background-color: transparent;
           border-top: none;
           border-left: none;
@@ -62,7 +62,16 @@
           font-size: 20px;
           color: white;
           font-family: "Barlow-Regular.ttf", sans-serif;
-          // padding-top: 15px;
+          padding-left: 10px;
+        }
+
+        select option {
+          background-color: rgb(98, 97, 97);
+          color: #00acb0;
+        }
+
+        select option:checked {
+          background-color: #00acb0;
         }
 
         input {
