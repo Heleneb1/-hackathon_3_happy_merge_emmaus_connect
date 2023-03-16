@@ -1,36 +1,88 @@
-import Counter from "../components/Counter";
-import logo from "../assets/logo.svg";
+import { Link } from "react-router-dom";
+import emmauslogo from "../assets/emmaus.png";
 
 export default function Home() {
+  // const handleClick = () => {
+  //   alert("Un email vous a été envoyé pour générer un nouveau mot de passe");
+  // };
   return (
-    <header className="App-header">
-      <img src={logo} className="App-logo" alt="logo" />
-      <p>Hello Vite + React !</p>
-
-      <Counter />
-
-      <p>
-        Edit <code>App.jsx</code> and save to test HMR updates.
-      </p>
-      <p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-        {" | "}
-        <a
-          className="App-link"
-          href="https://vitejs.dev/guide/features.html"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Vite Docs
-        </a>
-      </p>
-    </header>
+    <div className="homeBody">
+      <div className="background">
+        <span />
+        <span />
+        <span />
+        <span />
+        <span />
+        <span />
+        <span />
+        <span />
+        <span />
+        <span />
+        <span />
+        <span />
+        <span />
+        <span />
+        <span />
+        <span />
+        <span />
+        <span />
+        <span />
+        <span />
+        <span />
+        <span />
+        <span />
+        <span />
+        <span />
+        <span />
+        <span />
+        <span />
+        <span />
+        <span />
+        <span />
+        <span />
+        <span />
+        <span />
+        <span />
+        <span />
+        <span />
+        <span />
+        <span />
+        <span />
+        <span />
+        <span />
+        <span />
+        <span />
+        <span />
+        <span />
+        <span />
+        <span />
+        <span />
+        <span />
+        <div className="logo">
+          <img src={emmauslogo} alt="logo emmaus" />
+        </div>
+      </div>
+      <div className="form">
+        <h2>Bienvenue</h2>
+        <div className="label">
+          <input type="email" placeholder="Adresse mail" />
+        </div>
+        <div className="label">
+          <input type="password" placeholder="Mot de passe" className="label" />
+        </div>
+        <div className="valider">
+          <Link to="/calculatrice">
+            <input type="submit" className="validButton" value="Connexion" />
+          </Link>
+        </div>
+        <p className="access">
+          {/* onClick={handleClick} */}
+          Mot de passe oublié ?
+        </p>
+      </div>
+      {/* <div className="circle" />
+      <div className="circle-1" />
+      <div className="circle-2" /> */}
+    </div>
   );
 }
