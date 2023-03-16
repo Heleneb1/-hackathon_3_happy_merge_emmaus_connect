@@ -1,9 +1,11 @@
+/* eslint-disable react/jsx-props-no-spreading */
+// eslint-disable-next-line import/no-extraneous-dependencies
 import { useForm } from "react-hook-form";
 import Header from "../components/Header";
 
 function Tableau() {
   const { register, handleSubmit } = useForm();
-  const onSubmit = (data) => console.log(data);
+  const onSubmit = (data) => console.info(data);
 
   return (
     <div>

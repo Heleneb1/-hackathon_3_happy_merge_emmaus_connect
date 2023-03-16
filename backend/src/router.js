@@ -2,18 +2,18 @@ const express = require("express");
 
 const router = express.Router();
 
-const itemControllers = require("./controllers/itemControllers");
+// const itemControllers = require("./controllers/itemControllers");
 const phoneControllers = require("./controllers/phoneControllers");
 const ramControllers = require("./controllers/ramControllers");
 const stockageControllers = require("./controllers/stockageControllers");
 const indiceAntutuControllers = require("./controllers/indiceAntutuControllers");
 const etatControllers = require("./controllers/etatControllers");
 
-router.get("/items", itemControllers.browse);
-router.get("/items/:id", itemControllers.read);
-router.put("/items/:id", itemControllers.edit);
-router.post("/items", itemControllers.add);
-router.delete("/items/:id", itemControllers.destroy);
+router.get("/indiceAntutu", indiceAntutuControllers.browse);
+router.get("/indiceAntutu/:id", indiceAntutuControllers.read);
+router.put("/indiceAntutu/:id", indiceAntutuControllers.edit);
+router.post("/indiceAntutu", indiceAntutuControllers.add);
+router.delete("/indiceAntutu/:id", indiceAntutuControllers.destroy);
 
 router.get("/phones", phoneControllers.browse);
 router.get("/phones/:id", phoneControllers.read);
@@ -32,12 +32,6 @@ router.get("/stockage/:id", stockageControllers.read);
 router.put("/stockage/:id", stockageControllers.edit);
 router.post("/stockage", stockageControllers.add);
 router.delete("/stockage/:id", stockageControllers.destroy);
-
-router.get("/indice_Antutu", indiceAntutuControllers.browse);
-router.get("/indice_Antutu/:id", indiceAntutuControllers.read);
-router.put("/indice_Antutu/:id", indiceAntutuControllers.edit);
-router.post("/indice_Antutu", indiceAntutuControllers.add);
-router.delete("/indice_Antutu/:id", indiceAntutuControllers.destroy);
 
 router.get("/etat", etatControllers.browse);
 router.get("/etat/:id", etatControllers.read);

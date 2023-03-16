@@ -1,110 +1,209 @@
--- MySQL Workbench Forward Engineering
+-- MySQL dump 10.13  Distrib 8.0.31, for Win64 (x86_64)
+--
+-- Host: localhost    Database: emmaus
+-- ------------------------------------------------------
+-- Server version	8.0.31
 
-SET @OLD_UNIQUE_CHECKS=@@UNIQUE_CHECKS, UNIQUE_CHECKS=0;
-SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0;
-SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='ONLY_FULL_GROUP_BY,STRICT_TRANS_TABLES,NO_ZERO_IN_DATE,NO_ZERO_DATE,ERROR_FOR_DIVISION_BY_ZERO,NO_ENGINE_SUBSTITUTION';
+/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
+/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
+/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
+/*!50503 SET NAMES utf8 */;
+/*!40103 SET @OLD_TIME_ZONE=@@TIME_ZONE */;
+/*!40103 SET TIME_ZONE='+00:00' */;
+/*!40014 SET @OLD_UNIQUE_CHECKS=@@UNIQUE_CHECKS, UNIQUE_CHECKS=0 */;
+/*!40014 SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0 */;
+/*!40101 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='NO_AUTO_VALUE_ON_ZERO' */;
+/*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
 
--- -----------------------------------------------------
--- Schema emmaus
--- -----------------------------------------------------
+--
+-- Table structure for table `config_minimale`
+--
 
--- -----------------------------------------------------
--- Schema emmaus
--- -----------------------------------------------------
-CREATE SCHEMA IF NOT EXISTS `emmaus` DEFAULT CHARACTER SET utf8 ;
-USE `emmaus` ;
+DROP TABLE IF EXISTS `config_minimale`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!50503 SET character_set_client = utf8mb4 */;
+CREATE TABLE `config_minimale` (
+  `id` int NOT NULL AUTO_INCREMENT,
+  `android` varchar(100) DEFAULT NULL,
+  `ram` int DEFAULT NULL,
+  `memoire` int DEFAULT NULL,
+  `ecran` int DEFAULT NULL,
+  `reseau` varchar(45) DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3;
+/*!40101 SET character_set_client = @saved_cs_client */;
 
--- -----------------------------------------------------
--- Table `emmaus`.`phone`
--- -----------------------------------------------------
-CREATE TABLE IF NOT EXISTS `emmaus`.`phone` (
-  `id` INT NOT NULL AUTO_INCREMENT,
-  `marque` VARCHAR(100) NULL,
-  `modele` VARCHAR(100) NULL,
-  `ram` INT NULL,
-  `stockage` INT NULL,
-  `indice_Ant` INT NULL,
-  `ponderation` INT NULL,
-  `id_emmaus_connect` VARCHAR(100) NULL,
-  `donateur` VARCHAR(100) NULL,
-  `imei` VARCHAR(100) NULL,
-  `taille_ecran` INT NULL,
-  `version_android` VARCHAR(45) NULL,
-  `reseau` VARCHAR(45) NULL,
-  `etat` VARCHAR(45) NULL,
-  `categorie` VARCHAR(45) NULL,
-  PRIMARY KEY (`id`))
-ENGINE = InnoDB;
+--
+-- Dumping data for table `config_minimale`
+--
 
+LOCK TABLES `config_minimale` WRITE;
+/*!40000 ALTER TABLE `config_minimale` DISABLE KEYS */;
+/*!40000 ALTER TABLE `config_minimale` ENABLE KEYS */;
+UNLOCK TABLES;
 
--- -----------------------------------------------------
--- Table `emmaus`.`ram`
--- -----------------------------------------------------
-CREATE TABLE IF NOT EXISTS `emmaus`.`ram` (
-  `id` INT NOT NULL AUTO_INCREMENT,
-  `memoire` INT NULL,
-  `valM` INT NULL,
-  PRIMARY KEY (`id`))
-ENGINE = InnoDB;
+--
+-- Table structure for table `etat`
+--
 
+DROP TABLE IF EXISTS `etat`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!50503 SET character_set_client = utf8mb4 */;
+CREATE TABLE `etat` (
+  `id` int NOT NULL AUTO_INCREMENT,
+  `etat_phone` varchar(100) DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3;
+/*!40101 SET character_set_client = @saved_cs_client */;
 
--- -----------------------------------------------------
--- Table `emmaus`.`stockage`
--- -----------------------------------------------------
-CREATE TABLE IF NOT EXISTS `emmaus`.`stockage` (
-  `id` INT NOT NULL AUTO_INCREMENT,
-  `stockage` INT NULL,
-  `valS` INT NULL,
-  PRIMARY KEY (`id`))
-ENGINE = InnoDB;
+--
+-- Dumping data for table `etat`
+--
 
+LOCK TABLES `etat` WRITE;
+/*!40000 ALTER TABLE `etat` DISABLE KEYS */;
+/*!40000 ALTER TABLE `etat` ENABLE KEYS */;
+UNLOCK TABLES;
 
--- -----------------------------------------------------
--- Table `emmaus`.`indice_Antutu`
--- -----------------------------------------------------
-CREATE TABLE IF NOT EXISTS `emmaus`.`indice_Antutu` (
-  `id` INT NOT NULL AUTO_INCREMENT,
-  `ant_min` INT NULL,
-  `ant_max` INT NULL,
-  `valA` INT NULL,
-  PRIMARY KEY (`id`))
-ENGINE = InnoDB;
+--
+-- Table structure for table `indiceantutu`
+--
 
+DROP TABLE IF EXISTS `indiceantutu`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!50503 SET character_set_client = utf8mb4 */;
+CREATE TABLE `indiceantutu` (
+  `id` int NOT NULL AUTO_INCREMENT,
+  `ant_min` int DEFAULT NULL,
+  `ant_max` int DEFAULT NULL,
+  `valA` int DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3;
+/*!40101 SET character_set_client = @saved_cs_client */;
 
--- -----------------------------------------------------
--- Table `emmaus`.`etat`
--- -----------------------------------------------------
-CREATE TABLE IF NOT EXISTS `emmaus`.`etat` (
-  `id` INT NOT NULL AUTO_INCREMENT,
-  `etat_phone` VARCHAR(100) NULL,
-  PRIMARY KEY (`id`))
-ENGINE = InnoDB;
+--
+-- Dumping data for table `indiceantutu`
+--
 
+LOCK TABLES `indiceantutu` WRITE;
+/*!40000 ALTER TABLE `indiceantutu` DISABLE KEYS */;
+/*!40000 ALTER TABLE `indiceantutu` ENABLE KEYS */;
+UNLOCK TABLES;
 
--- -----------------------------------------------------
--- Table `emmaus`.`config_minimale`
--- -----------------------------------------------------
-CREATE TABLE IF NOT EXISTS `emmaus`.`config_minimale` (
-  `id` INT NOT NULL AUTO_INCREMENT,
-  `android` VARCHAR(100) NULL,
-  `ram` INT NULL,
-  `memoire` INT NULL,
-  `ecran` INT NULL,
-  `reseau` VARCHAR(45) NULL,
-  PRIMARY KEY (`id`))
-ENGINE = InnoDB;
+--
+-- Table structure for table `phone`
+--
 
+DROP TABLE IF EXISTS `phone`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!50503 SET character_set_client = utf8mb4 */;
+CREATE TABLE `phone` (
+  `id` int NOT NULL AUTO_INCREMENT,
+  `marque` varchar(100) DEFAULT NULL,
+  `modele` varchar(100) DEFAULT NULL,
+  `ram` int DEFAULT NULL,
+  `stockage` int DEFAULT NULL,
+  `indice_Ant` int DEFAULT NULL,
+  `ponderation` int DEFAULT NULL,
+  `id_emmaus_connect` varchar(100) DEFAULT NULL,
+  `donateur` varchar(100) DEFAULT NULL,
+  `imei` varchar(100) DEFAULT NULL,
+  `taille_ecran` int DEFAULT NULL,
+  `version_android` varchar(45) DEFAULT NULL,
+  `reseau` varchar(45) DEFAULT NULL,
+  `etat` varchar(45) DEFAULT NULL,
+  `categorie` varchar(45) DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3;
+/*!40101 SET character_set_client = @saved_cs_client */;
 
--- -----------------------------------------------------
--- Table `emmaus`.`ponderation`
--- -----------------------------------------------------
-CREATE TABLE IF NOT EXISTS `emmaus`.`ponderation` (
-  `id` INT NOT NULL AUTO_INCREMENT,
-  `valeur` INT NULL,
-  PRIMARY KEY (`id`))
-ENGINE = InnoDB;
+--
+-- Dumping data for table `phone`
+--
 
+LOCK TABLES `phone` WRITE;
+/*!40000 ALTER TABLE `phone` DISABLE KEYS */;
+/*!40000 ALTER TABLE `phone` ENABLE KEYS */;
+UNLOCK TABLES;
 
-SET SQL_MODE=@OLD_SQL_MODE;
-SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS;
-SET UNIQUE_CHECKS=@OLD_UNIQUE_CHECKS;
+--
+-- Table structure for table `ponderation`
+--
+
+DROP TABLE IF EXISTS `ponderation`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!50503 SET character_set_client = utf8mb4 */;
+CREATE TABLE `ponderation` (
+  `id` int NOT NULL AUTO_INCREMENT,
+  `valeur` int DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `ponderation`
+--
+
+LOCK TABLES `ponderation` WRITE;
+/*!40000 ALTER TABLE `ponderation` DISABLE KEYS */;
+/*!40000 ALTER TABLE `ponderation` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `ram`
+--
+
+DROP TABLE IF EXISTS `ram`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!50503 SET character_set_client = utf8mb4 */;
+CREATE TABLE `ram` (
+  `id` int NOT NULL AUTO_INCREMENT,
+  `memoire` int DEFAULT NULL,
+  `valM` int DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `ram`
+--
+
+LOCK TABLES `ram` WRITE;
+/*!40000 ALTER TABLE `ram` DISABLE KEYS */;
+/*!40000 ALTER TABLE `ram` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `stockage`
+--
+
+DROP TABLE IF EXISTS `stockage`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!50503 SET character_set_client = utf8mb4 */;
+CREATE TABLE `stockage` (
+  `id` int NOT NULL AUTO_INCREMENT,
+  `stockage` int DEFAULT NULL,
+  `valS` int DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `stockage`
+--
+
+LOCK TABLES `stockage` WRITE;
+/*!40000 ALTER TABLE `stockage` DISABLE KEYS */;
+/*!40000 ALTER TABLE `stockage` ENABLE KEYS */;
+UNLOCK TABLES;
+/*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
+
+/*!40101 SET SQL_MODE=@OLD_SQL_MODE */;
+/*!40014 SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS */;
+/*!40014 SET UNIQUE_CHECKS=@OLD_UNIQUE_CHECKS */;
+/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
+/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
+/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
+/*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
+
+-- Dump completed on 2023-03-16 16:41:47
