@@ -1,6 +1,6 @@
 const AbstractManager = require("./AbstractManager");
 
-class ItemManager extends AbstractManager {
+class IndiceAntutu extends AbstractManager {
   constructor() {
     super({ table: "indiceantutu" });
   }
@@ -25,4 +25,4 @@ class ItemManager extends AbstractManager {
   }
 }
 
-module.exports = ItemManager;
+module.exports = IndiceAntutu;

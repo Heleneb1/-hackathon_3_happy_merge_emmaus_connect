@@ -1,0 +1,47 @@
+.GlobalT {
+  display: flex;
+  justify-content: center;
+  position: relative;
+  top: 160px;
+  .containerTableau {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(217, 217, 217, 0.29);
+    width: 100vh;
+    border-radius: 50px;
+    gap: 84px;
+    border: 5px solid #00acb0;
+    .containerForm {
+      display: flex;
+      flex-direction: column;
+      .inputForm {
+        width: 329px;
+        height: 26px;
+        background-color: #00acb0;
+        font-size: 16px;
+        border-radius: 50px;
+        margin: 12px;
+        font-family: "Barlow-regular";
+        color: white;
+      }
+    }
+    .buttonForm {
+      width: 105px;
+      height: 40px;
+      border-radius: 30px;
+      background-color: #00acb0;
+      color: white;
+      font-size: 16px;
+      font-family: "Barlow-regular";
+      cursor: pointer;
+    }
+  }
+}
+
+::placeholder {
+  color: white;
+  text-shadow: none;
+  font-family: "Barlow-regular";
+}
