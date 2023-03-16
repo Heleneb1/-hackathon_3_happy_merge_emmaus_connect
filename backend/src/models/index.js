@@ -29,14 +29,30 @@ pool.getConnection().catch(() => {
 
 const models = {};
 
-const ItemManager = require("./ItemManager");
+// const ItemManager = require("./ItemManager");
+// const PhoneManager = require("./PhoneManager");
+// const RamManager = require("./RamManager");
+// const StockageManager = require("./StockageManager");
+const IndiceAntutuManager = require("./IndiceAntutuManager");
+// const EtatManager = require("./EtatManager");
 
-models.item = new ItemManager();
-models.item.setDatabase(pool);
+// models.item = new ItemManager();
+// models.item.setDatabase(pool);
 
-// bonus: use a proxy to personalize error message,
-// when asking for a non existing model
+// models.phone = new PhoneManager();
+// models.phone.setDatabase(pool);
 
+// models.ram = new RamManager();
+// models.ram.setDatabase(pool);
+
+// models.stockage = new StockageManager();
+// models.stockage.setDatabase(pool);
+
+models.indiceantutu = new IndiceAntutuManager();
+models.indiceantutu.setDatabase(pool);
+
+// models.etat = new EtatManager();
+// models.etat.setDatabase(pool);
 const handler = {
   get(obj, prop) {
     if (prop in obj) {
