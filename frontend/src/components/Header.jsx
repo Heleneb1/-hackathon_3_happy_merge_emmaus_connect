@@ -9,6 +9,7 @@ export default function Header() {
         </Link>
         <Link to="/guide" className="linkNavHeader">
           <div className="divItemNav">Guide d'utilisation</div>
+        </Link>
         <Link to="/" className="linkNavHeader">
           <div className="divItemNav">Liste tel</div>
         </Link>
@@ -16,9 +17,6 @@ export default function Header() {
       <div className="secondDivHeader">
         <Link to="/" className="linkNavHeader">
           <div className="divItemNav">Config</div>
-        </Link>
-        <Link to="/" className="linkNavHeader">
-          <div className="divItemNav">FAQ</div>
         </Link>
         <Link to="/" className="linkNavHeader">
           <div className="divItemNav">Log out</div>
