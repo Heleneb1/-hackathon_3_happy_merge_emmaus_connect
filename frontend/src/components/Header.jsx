@@ -4,11 +4,11 @@ export default function Header() {
   return (
     <div className="mainDivHeader">
       <div className="firstDivHeader">
-        <Link to="/" className="linkNavHeader">
+        <Link to="/calculatrice" className="linkNavHeader">
           <div className="divItemNav">Ajout tel</div>
         </Link>
-        <Link to="/" className="linkNavHeader">
-          <div className="divItemNav">FAQ</div>
+        <Link to="/guide" className="linkNavHeader">
+          <div className="divItemNav">Guide d'utilisation</div>
         </Link>
       </div>
       <div className="secondDivHeader">
