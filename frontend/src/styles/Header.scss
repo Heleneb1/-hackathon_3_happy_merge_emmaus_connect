@@ -28,4 +28,17 @@
   .divItemNav {
     padding: 0px 15px;
   }
+  .firstDivHeader {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .secondDivHeader {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+  }
+  .mainDivHeader {
+    height: 10vh;
+  }
 }
