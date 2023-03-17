@@ -1,8 +1,7 @@
 import { useState, useEffect } from "react";
 import axios from "axios";
-import exemple1 from "../assets/exemple.png";
 
-export default function ConfigRAM() {
+export default function ConfigCategories() {
   const [values, setValues] = useState([]);
 
   useEffect(() => {
@@ -34,12 +33,9 @@ export default function ConfigRAM() {
   };
 
   return (
-    <div className="configRAM">
+    <div className="ConfigCategories">
       <div className="modalTitle">
-        <h3>Valeurs Mémoire</h3>
-      </div>
-      <div className="exemple">
-        <img src={exemple1} alt="exemple unités" />
+        <h3>Catégorisation des smrtphones</h3>
       </div>
       <form onSubmit={handleFormSubmit}>
         <div className="maxibox">
