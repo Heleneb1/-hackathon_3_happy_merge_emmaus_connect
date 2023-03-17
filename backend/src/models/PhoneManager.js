@@ -11,7 +11,7 @@ class PhoneManager extends AbstractManager {
       [
         phone.marque,
         phone.modele,
-        phone.marque,
+        phone.ram,
         phone.stockage,
         phone.indice_Ant,
         phone.ponderation,
