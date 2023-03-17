@@ -15,7 +15,7 @@ export default function Header() {
         </Link>
       </div>
       <div className="secondDivHeader">
-        <Link to="/" className="linkNavHeader">
+        <Link to="/configuration" className="linkNavHeader">
           <div className="divItemNav">Config</div>
         </Link>
         <Link to="/" className="linkNavHeader">
