@@ -16,6 +16,31 @@
 /*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
 
 --
+-- Table structure for table `categories`
+--
+
+DROP TABLE IF EXISTS `categories`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!50503 SET character_set_client = utf8mb4 */;
+CREATE TABLE `categories` (
+  `id` int NOT NULL AUTO_INCREMENT,
+  `val_total_min` varchar(45) DEFAULT NULL,
+  `val_total_max` varchar(45) DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8mb3;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `categories`
+--
+
+LOCK TABLES `categories` WRITE;
+/*!40000 ALTER TABLE `categories` DISABLE KEYS */;
+INSERT INTO `categories` VALUES (1,'2D','2E'),(2,'5c','25D'),(3,'3c','34r');
+/*!40000 ALTER TABLE `categories` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
 -- Table structure for table `config_minimale`
 --
 
@@ -30,7 +55,7 @@ CREATE TABLE `config_minimale` (
   `ecran` int DEFAULT NULL,
   `reseau` varchar(45) DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3;
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb3;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -39,6 +64,7 @@ CREATE TABLE `config_minimale` (
 
 LOCK TABLES `config_minimale` WRITE;
 /*!40000 ALTER TABLE `config_minimale` DISABLE KEYS */;
+INSERT INTO `config_minimale` VALUES (1,NULL,NULL,NULL,NULL,NULL);
 /*!40000 ALTER TABLE `config_minimale` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -53,7 +79,7 @@ CREATE TABLE `etat` (
   `id` int NOT NULL AUTO_INCREMENT,
   `etat_phone` varchar(100) DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3;
+) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8mb3;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -62,6 +88,7 @@ CREATE TABLE `etat` (
 
 LOCK TABLES `etat` WRITE;
 /*!40000 ALTER TABLE `etat` DISABLE KEYS */;
+INSERT INTO `etat` VALUES (1,'RECONDITggg'),(2,'RECONDITIONNABLE'),(3,'BLOQUE'),(4,'REPARABLE'),(5,'DEEE');
 /*!40000 ALTER TABLE `etat` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -78,7 +105,7 @@ CREATE TABLE `indiceantutu` (
   `ant_max` int DEFAULT NULL,
   `valA` int DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3;
+) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8mb3;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -87,6 +114,7 @@ CREATE TABLE `indiceantutu` (
 
 LOCK TABLES `indiceantutu` WRITE;
 /*!40000 ALTER TABLE `indiceantutu` DISABLE KEYS */;
+INSERT INTO `indiceantutu` VALUES (1,3,100,70),(2,3,50000,32),(3,42,1000000,3);
 /*!40000 ALTER TABLE `indiceantutu` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -161,7 +189,7 @@ CREATE TABLE `ram` (
   `memoire` int DEFAULT NULL,
   `valM` int DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3;
+) ENGINE=InnoDB AUTO_INCREMENT=9 DEFAULT CHARSET=utf8mb3;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -170,6 +198,7 @@ CREATE TABLE `ram` (
 
 LOCK TABLES `ram` WRITE;
 /*!40000 ALTER TABLE `ram` DISABLE KEYS */;
+INSERT INTO `ram` VALUES (1,2,1),(2,5,0),(3,5,50),(4,4,NULL),(5,6,NULL),(6,8,NULL),(7,12,NULL),(8,16,NULL);
 /*!40000 ALTER TABLE `ram` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -206,4 +235,5 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2023-03-16 16:41:47
+-- Dump completed on 2023-03-17 11:05:12
+
