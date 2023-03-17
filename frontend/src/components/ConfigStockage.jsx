@@ -1,12 +1,12 @@
 import { useState, useEffect } from "react";
 import axios from "axios";
-import exemple1 from "../assets/exemple.png";
+import exemple2 from "../assets/exemple2.png";
 
-export default function ConfigRAM() {
+export default function ConfigStockage() {
   const [values, setValues] = useState([]);
 
   useEffect(() => {
-    axios.get("http://localhost:5000/ram").then((response) => {
+    axios.get("http://localhost:5000/stockage").then((response) => {
       setValues(response.data);
     });
   }, []);
@@ -23,7 +23,7 @@ export default function ConfigRAM() {
     event.preventDefault();
     values.forEach((value) => {
       axios
-        .put(`http://localhost:5000/ram/${value.id}`, value)
+        .put(`http://localhost:5000/stockage/${value.id}`, value)
         .then((response) => {
           console.info(response.data);
         })
@@ -34,12 +34,12 @@ export default function ConfigRAM() {
   };
 
   return (
-    <div className="configRAM">
+    <div className="configStockage">
       <div className="modalTitle">
-        <h3>Valeurs Mémoire</h3>
+        <h3>Valeurs Stockage</h3>
       </div>
       <div className="exemple">
-        <img src={exemple1} alt="exemple unités" />
+        <img src={exemple2} alt="exemple unités" />
       </div>
       <form onSubmit={handleFormSubmit}>
         <div className="maxibox">
@@ -51,19 +51,19 @@ export default function ConfigRAM() {
                     className="gate"
                     id="move"
                     type="text"
-                    value={value.valM}
+                    value={value.valS}
                     onChange={(event) =>
-                      handleValueChange(value.id, "valM", event.target.value)
+                      handleValueChange(value.id, "valS", event.target.value)
                     }
                   />
                   <label htmlFor="class">
                     <input
                       type="text"
-                      value={value.memoire}
+                      value={value.stockage}
                       onChange={(event) =>
                         handleValueChange(
                           value.id,
-                          "memoire",
+                          "stockage",
                           event.target.value
                         )
                       }

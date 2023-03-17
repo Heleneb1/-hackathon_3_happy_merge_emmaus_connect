@@ -1,12 +1,11 @@
 import { useState, useEffect } from "react";
 import axios from "axios";
-import exemple1 from "../assets/exemple.png";
 
-export default function ConfigRAM() {
+export default function ConfigMini() {
   const [values, setValues] = useState([]);
 
   useEffect(() => {
-    axios.get("http://localhost:5000/ram").then((response) => {
+    axios.get("http://localhost:5000/configmin").then((response) => {
       setValues(response.data);
     });
   }, []);
@@ -23,7 +22,7 @@ export default function ConfigRAM() {
     event.preventDefault();
     values.forEach((value) => {
       axios
-        .put(`http://localhost:5000/ram/${value.id}`, value)
+        .put(`http://localhost:5000/configmin/${value.id}`, value)
         .then((response) => {
           console.info(response.data);
         })
@@ -34,12 +33,9 @@ export default function ConfigRAM() {
   };
 
   return (
-    <div className="configRAM">
+    <div className="ConfigMini">
       <div className="modalTitle">
-        <h3>Valeurs Mémoire</h3>
-      </div>
-      <div className="exemple">
-        <img src={exemple1} alt="exemple unités" />
+        <h3>ConfigMini pour être mis en vente</h3>
       </div>
       <form onSubmit={handleFormSubmit}>
         <div className="maxibox">

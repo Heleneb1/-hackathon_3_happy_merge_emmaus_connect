@@ -43,7 +43,7 @@ h2 {
   padding-bottom: 20px;
 }
 
-input {
+.label input {
   width: 400px;
   height: 20px;
   background-color: transparent;
@@ -56,14 +56,14 @@ input {
   color: #00acb0;
 }
 
-label {
+.label label {
   display: flex;
   align-items: center;
   padding-top: 10px;
   padding-bottom: 10px;
 }
 
-::placeholder {
+.label ::placeholder {
   color: white;
   font-family: "Barlow-Regular.ttf", sans-serif;
   text-shadow: 1px 3px 3px #474748;
