@@ -29,14 +29,14 @@ const read = (req, res) => {
 };
 
 const edit = (req, res) => {
-  const indiceAntutu = req.body;
+  const indiceantutu = req.body;
 
   // TODO validations (length, format...)
 
-  indiceAntutu.id = parseInt(req.params.id, 10);
+  indiceantutu.id = parseInt(req.params.id, 10);
 
   models.indiceantutu
-    .update()
+    .update(indiceantutu)
     .then(([result]) => {
       if (result.affectedRows === 0) {
         res.sendStatus(404);
@@ -58,7 +58,7 @@ const add = (req, res) => {
   models.indiceantutu
     .insert(indiceantutu)
     .then(([result]) => {
-      res.location(`/items/${result.insertId}`).sendStatus(201);
+      res.location(`/indiceantutu/${result.insertId}`).sendStatus(201);
     })
     .catch((err) => {
       console.error(err);

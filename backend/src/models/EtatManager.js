@@ -13,10 +13,10 @@ class EtatManager extends AbstractManager {
   }
 
   update(etat) {
-    return this.database.query(
-      `update ${this.table} set etat_phone where id = ?`,
-      [etat.etat_phone]
-    );
+    return this.database.query(`update etat set etat_phone =? where id = ?`, [
+      etat.etat_phone,
+      etat.id,
+    ]);
   }
 }
 

@@ -5,7 +5,7 @@ export default function ConfigMini() {
   const [values, setValues] = useState([]);
 
   useEffect(() => {
-    axios.get("http://localhost:5005/categories").then((response) => {
+    axios.get("http://localhost:5000/etat%22).then((response) => {
       setValues(response.data);
     });
   }, []);
@@ -22,7 +22,7 @@ export default function ConfigMini() {
     event.preventDefault();
     axios
       .put(
-        `http://localhost:5005/categories/${id}`,
+        http://localhost:5000/etat/${id},
         values.find((val) => val.id === id)
       )
       .then((response) => {
@@ -34,9 +34,9 @@ export default function ConfigMini() {
   };
 
   return (
-    <div className="configMini">
+    <div className="configEtat">
       <div className="modalTitle">
-        <h3>Catégories</h3>
+        <h3>Valeurs Mémoire</h3>
       </div>
       <form onSubmit={handleFormSubmit}>
         <ul>
@@ -44,24 +44,9 @@ export default function ConfigMini() {
             <li key={value.id}>
               <input
                 type="text"
-                value={value.val_total_min}
+                value={value.etat_phone}
                 onChange={(event) =>
-                  handleValueChange(
-                    value.id,
-                    "val_total_min",
-                    event.target.value
-                  )
-                }
-              />
-              <input
-                type="text"
-                value={value.val_total_max}
-                onChange={(event) =>
-                  handleValueChange(
-                    value.id,
-                    "val_total_max",
-                    event.target.value
-                  )
+                  handleValueChange(value.id, "etat_phone", event.target.value)
                 }
               />
               <button

@@ -33,7 +33,7 @@ export default function ConfigMini() {
   };
 
   return (
-    <div className="ConfigMini">
+    <div className="configMini">
       <div className="modalTitle">
         <h3>ConfigMini pour être mis en vente</h3>
       </div>
@@ -69,6 +69,57 @@ export default function ConfigMini() {
               </li>
             </div>
           ))}
+        </div>
+        <div className="row">
+          <span>
+            <input className="slide-up" id="card" type="text" placeholder="8" />
+            <label htmlFor="card">Android</label>
+          </span>
+          <span>
+            <input
+              className="slide-up"
+              id="expires"
+              type="text"
+              placeholder="2 GO"
+            />
+            <label htmlFor="expires">Ram</label>
+          </span>
+          <span>
+            <input
+              className="slide-up"
+              id="security"
+              type="text"
+              placeholder="16 GO"
+            />
+            <label htmlFor="security">Mémoire</label>
+          </span>
+          <span>
+            <input
+              className="slide-up"
+              id="card"
+              type="text"
+              placeholder="4p"
+            />
+            <label htmlFor="card">Ecran</label>
+          </span>
+          <span>
+            <input
+              className="slide-up"
+              id="expires"
+              type="text"
+              placeholder="4G"
+            />
+            <label htmlFor="expires">Réseau</label>
+          </span>
+          <span>
+            <input
+              className="slide-up"
+              id="security"
+              type="text"
+              placeholder="Mémoire"
+            />
+            <label htmlFor="security">Avec chargeur et cable</label>
+          </span>
         </div>
         <div className="register2">
           <input type="submit" className="register" value="Enregistrer" />
