@@ -65,7 +65,7 @@ export default function Home() {
       <div className="form">
         <h2>Bienvenue</h2>
         <div className="label">
-          <input type="email" placeholder="Adresse mail" />
+          <input type="email" placeholder="Adresse mail" className="label" />
         </div>
         <div className="label">
           <input type="password" placeholder="Mot de passe" className="label" />
