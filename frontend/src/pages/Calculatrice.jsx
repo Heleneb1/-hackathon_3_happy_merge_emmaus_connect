@@ -10,7 +10,7 @@ export default function Calculatrice() {
   const [stockInputValue, setStockInputValue] = useState("");
   const [pondeInputValue, setPondeInputValue] = useState("");
   const [finalValue, setFinalValue] = useState(null);
-  const [valA, setValA] = useState("");
+  const [valA, setValA] = useState(0);
 
   const intervallesIndice = [
     { min: 0, max: 50000, valA: 40 },
@@ -144,6 +144,7 @@ export default function Calculatrice() {
           <h1>Nouveau téléphone</h1>
           <form className="calculateForm" onSubmit={handleSubmit}>
             <label>
+              <span>Sélectionnez la RAM</span>
               <select
                 className="selectInput"
                 onChange={(e) => setMemInputValue(e.target.value)}
@@ -155,6 +156,7 @@ export default function Calculatrice() {
               {/* {memInputValue} */}
             </label>
             <label>
+              <span>Sélectionnez les capacités de stockage</span>
               <select
                 className="selectInput"
                 onChange={(e) => setStockInputValue(e.target.value)}
@@ -175,6 +177,7 @@ export default function Calculatrice() {
               />
             </label>
             <label>
+              <span>Sélectionnez la pondération</span>
               <select
                 className="selectInput"
                 onChange={(e) => setPondeInputValue(e.target.value)}
@@ -186,12 +189,25 @@ export default function Calculatrice() {
               {/* {pondeInputValue} */}
             </label>
             <div className="valider">
-              <Link to="/tableau">
-                <input type="submit" className="validButton" value="Valider" />
-              </Link>
+              <input
+                type="submit"
+                className="validButton"
+                value="Enregistrer"
+              />
             </div>
           </form>
-          {/* <div className="resultContainer">{valA && <p>ValA: {valA}</p>}</div> */}
+          <div className="footerContainer">
+            <div className="resultContainer">
+              {/* {console.log(finalValue)} */}
+              <p>Score: {finalValue?.valeur}</p>
+              <p>Catégorie: {finalValue?.categorie}</p>
+            </div>
+            <Link to="/tableau">
+              <div className="valider">
+                <input type="submit" className="validButton" value="Valider" />
+              </div>
+            </Link>
+          </div>
         </div>
       </div>
     </div>
