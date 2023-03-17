@@ -1,5 +1,5 @@
 import Header from "../components/Header";
-import ConfigRAM from "../components/ConfigRAM";
+import ConfigRam from "../components/ConfigMemoire";
 
 export default function Config() {
   return (
@@ -28,7 +28,8 @@ export default function Config() {
 
         <div className="rightbox">
           <h1>Configuration des données téléphone</h1>
-          <ConfigRAM />
+          {/* <ConfigRAM /> */}
+          <ConfigRam />
         </div>
       </div>
     </>

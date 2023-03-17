@@ -10,6 +10,14 @@ $barlow: "Barlow-Regular.ttf", sans-serif;
     inset -2px -2px 4px rgba(lighten($gray, 28%), 0.7);
   display: flex;
   flex-direction: column;
+  max-height: 500px;
+}
+
+.maxibox {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
 }
 
 .modalTitle {
@@ -40,17 +48,21 @@ $barlow: "Barlow-Regular.ttf", sans-serif;
 .row {
   max-width: 800px;
   margin: 0 auto;
-  padding: 30px 30px;
+  padding: 10px 20px;
   text-align: center;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
 
   &:first-child {
-    padding: 40px 30px;
+    padding: 0 30px;
   }
 
   span {
     position: relative;
     display: inline-block;
-    margin: 30px 10px;
+    margin: 10px 10px;
   }
 }
 
@@ -171,7 +183,7 @@ span:nth-child(2) .gate:active {
   color: white;
   font-size: 22px;
   font-family: "Barlow-Regular.ttf", sans-serif;
-  margin-bottom: 25px;
+  margin: 25px;
   cursor: pointer;
   box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset,
     rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset,
@@ -185,6 +197,16 @@ span:nth-child(2) .gate:active {
 .register2 {
   display: flex;
   justify-content: center;
+}
+
+input {
+  width: 30px;
+  background-color: #233d8d;
+  color: #fff;
+}
+
+li {
+  list-style-type: none;
 }
 
 // .exemple {

@@ -10,7 +10,7 @@ export default function Header() {
         <Link to="/guide" className="linkNavHeader">
           <div className="divItemNav">Guide d'utilisation</div>
         </Link>
-        <Link to="/" className="linkNavHeader">
+        <Link to="/phones" className="linkNavHeader">
           <div className="divItemNav">Liste tel</div>
         </Link>
       </div>
