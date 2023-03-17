@@ -14,9 +14,13 @@ class RamManager extends AbstractManager {
 
   update(ram) {
     return this.database.query(
-      `update ${this.table} set memoire = ?, valM = ? where id = ?`,
-      [ram.memoire, ram.valM]
+      `update ram set memoire = ?, valM = ? where id = ?`,
+      [ram.memoire, ram.valM, ram.id]
     );
+  }
+
+  findAll() {
+    return this.database.query(`select * from  ${this.table}`);
   }
 }
 

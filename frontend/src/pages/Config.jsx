@@ -1,3 +1,5 @@
+import ConfigMini from "../components/ConfigMemoire";
+
 export default function Config() {
   return (
     <div className="container">
@@ -23,6 +25,7 @@ export default function Config() {
 
       <div className="rightbox">
         <h1>Configuration des données téléphone</h1>
+        <ConfigMini />
       </div>
     </div>
   );

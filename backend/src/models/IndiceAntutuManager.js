@@ -14,7 +14,7 @@ class IndiceAntutu extends AbstractManager {
 
   update(indiceantutu) {
     return this.database.query(
-      `update ${this.table} set ant_min = ? , ant_max = ? , valA = ?  where id = ?`,
+      `update indiceantutu set ant_min = ? , ant_max = ? , valA = ?  where id = ?`,
       [
         indiceantutu.ant_min,
         indiceantutu.ant_max,
