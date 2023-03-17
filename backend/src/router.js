@@ -8,6 +8,7 @@ const ramControllers = require("./controllers/ramControllers");
 const stockageControllers = require("./controllers/stockageControllers");
 const indiceAntutuControllers = require("./controllers/indiceAntutuControllers");
 const etatControllers = require("./controllers/etatControllers");
+const ponderationControllers = require("./controllers/ponderationControllers");
 const configminControllers = require("./controllers/configMinControllers");
 const categoriesControllers = require("./controllers/categoriesControllers");
 
@@ -40,6 +41,12 @@ router.get("/etat/:id", etatControllers.read);
 router.put("/etat/:id", etatControllers.edit);
 router.post("/etat", etatControllers.add);
 router.delete("/etat/:id", etatControllers.destroy);
+
+router.get("/ponderation", ponderationControllers.browse);
+router.get("/ponderation/:id", ponderationControllers.read);
+router.put("/ponderation/:id", ponderationControllers.edit);
+router.post("/ponderation", ponderationControllers.add);
+router.delete("/ponderation/:id", ponderationControllers.destroy);
 
 router.get("/configmin", configminControllers.browse);
 router.get("/configmin/:id", configminControllers.read);

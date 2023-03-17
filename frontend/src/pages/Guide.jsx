@@ -3,7 +3,7 @@ import Header from "../components/Header";
 
 export default function Guide() {
   return (
-    <>
+    <div className="guidePage">
       <Header />
       <div className="guide">
         <div className="guideBox">
@@ -65,6 +65,6 @@ export default function Guide() {
           </ul>
         </div>
       </div>
-    </>
+    </div>
   );
 }

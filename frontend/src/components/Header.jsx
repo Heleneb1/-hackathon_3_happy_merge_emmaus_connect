@@ -7,7 +7,6 @@ export default function Header() {
         <Link to="/calculatrice" className="linkNavHeader">
           <div className="divItemNav">Ajout tel</div>
         </Link>
-
         <Link to="/phones" className="linkNavHeader">
           <div className="divItemNav">Liste tel</div>
         </Link>
