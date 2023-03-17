@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import axios from "axios";
 
-export default function ConfigCategories() {
+export default function ConfigMini() {
   const [values, setValues] = useState([]);
 
   useEffect(() => {
@@ -18,61 +18,61 @@ export default function ConfigCategories() {
     );
   };
 
-  const handleFormSubmit = (event) => {
+  const handleFormSubmit = (event, id) => {
     event.preventDefault();
-    values.forEach((value) => {
-      axios
-        .put(`http://localhost:5000/categories/${value.id}`, value)
-        .then((response) => {
-          console.info(response.data);
-        })
-        .catch((error) => {
-          console.error(error);
-        });
-    });
+    axios
+      .put(
+        `http://localhost:5000/categories/${id}`,
+        values.find((val) => val.id === id)
+      )
+      .then((response) => {
+        console.info(response.data);
+      })
+      .catch((error) => {
+        console.error(error);
+      });
   };
 
   return (
-    <div className="ConfigCategories">
+    <div className="configMini">
       <div className="modalTitle">
-        <h3>Catégorisation des smrtphones</h3>
+        <h3>Catégories</h3>
       </div>
       <form onSubmit={handleFormSubmit}>
-        <div className="maxibox">
+        <ul>
           {values.map((value) => (
-            <div className="row">
-              <li key={value.id}>
-                <span>
-                  <input
-                    className="gate"
-                    id="move"
-                    type="text"
-                    value={value.valM}
-                    onChange={(event) =>
-                      handleValueChange(value.id, "valM", event.target.value)
-                    }
-                  />
-                  <label htmlFor="class">
-                    <input
-                      type="text"
-                      value={value.memoire}
-                      onChange={(event) =>
-                        handleValueChange(
-                          value.id,
-                          "memoire",
-                          event.target.value
-                        )
-                      }
-                    />
-                  </label>
-                </span>
-              </li>
-            </div>
+            <li key={value.id}>
+              <input
+                type="text"
+                value={value.val_total_min}
+                onChange={(event) =>
+                  handleValueChange(
+                    value.id,
+                    "val_total_min",
+                    event.target.value
+                  )
+                }
+              />
+              <input
+                type="text"
+                value={value.val_total_max}
+                onChange={(event) =>
+                  handleValueChange(
+                    value.id,
+                    "val_total_max",
+                    event.target.value
+                  )
+                }
+              />
+              <button
+                type="submit"
+                onClick={(event) => handleFormSubmit(event, value.id)}
+              >
+                Enregistrer
+              </button>
+            </li>
           ))}
-        </div>
-        <div className="register2">
-          <input type="submit" className="register" value="Enregistrer" />
-        </div>
+        </ul>
       </form>
     </div>
   );

@@ -5,7 +5,7 @@ export default function ConfigAntutu() {
   const [values, setValues] = useState([]);
 
   useEffect(() => {
-    axios.get("http://localhost:5000/indiceAntutu").then((response) => {
+    axios.get("http://localhost:5000/indiceantutu").then((response) => {
       setValues(response.data);
     });
   }, []);
@@ -18,61 +18,60 @@ export default function ConfigAntutu() {
     );
   };
 
-  const handleFormSubmit = (event) => {
+  const handleFormSubmit = (event, id) => {
     event.preventDefault();
-    values.forEach((value) => {
-      axios
-        .put(`http://localhost:5000/indiceAntutu/${value.id}`, value)
-        .then((response) => {
-          console.info(response.data);
-        })
-        .catch((error) => {
-          console.error(error);
-        });
-    });
+    axios
+      .put(
+        `http://localhost:5000/indiceantutu/${id}`,
+        values.find((val) => val.id === id)
+      )
+      .then((response) => {
+        console.info(response.data);
+      })
+      .catch((error) => {
+        console.error(error);
+      });
   };
 
   return (
-    <div className="ConfigAntutu">
+    <div className="configAntutu,">
       <div className="modalTitle">
-        <h3>Valeurs Antutu</h3>
+        <h3>Valeurs Mémoire</h3>
       </div>
       <form onSubmit={handleFormSubmit}>
-        <div className="maxibox">
+        <ul>
           {values.map((value) => (
-            <div className="row">
-              <li key={value.id}>
-                <span>
-                  <input
-                    className="gate"
-                    id="move"
-                    type="text"
-                    value={value.valM}
-                    onChange={(event) =>
-                      handleValueChange(value.id, "valM", event.target.value)
-                    }
-                  />
-                  <label htmlFor="class">
-                    <input
-                      type="text"
-                      value={value.memoire}
-                      onChange={(event) =>
-                        handleValueChange(
-                          value.id,
-                          "memoire",
-                          event.target.value
-                        )
-                      }
-                    />
-                  </label>
-                </span>
-              </li>
-            </div>
+            <li key={value.id}>
+              <input
+                type="text"
+                value={value.ant_min}
+                onChange={(event) =>
+                  handleValueChange(value.id, "ant_min", event.target.value)
+                }
+              />
+              <input
+                type="text"
+                value={value.ant_max}
+                onChange={(event) =>
+                  handleValueChange(value.id, "ant_max", event.target.value)
+                }
+              />
+              <input
+                type="text"
+                value={value.valA}
+                onChange={(event) =>
+                  handleValueChange(value.id, "valA", event.target.value)
+                }
+              />
+              <button
+                type="submit"
+                onClick={(event) => handleFormSubmit(event, value.id)}
+              >
+                Enregistrer
+              </button>
+            </li>
           ))}
-        </div>
-        <div className="register2">
-          <input type="submit" className="register" value="Enregistrer" />
-        </div>
+        </ul>
       </form>
     </div>
   );
