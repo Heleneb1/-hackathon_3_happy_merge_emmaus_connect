@@ -5,7 +5,7 @@ export default function ConfigAntutu() {
   const [values, setValues] = useState([]);
 
   useEffect(() => {
-    axios.get("http://localhost:5005/ram").then((response) => {
+    axios.get("http://localhost:5000/indiceAntutu").then((response) => {
       setValues(response.data);
     });
   }, []);
@@ -22,7 +22,7 @@ export default function ConfigAntutu() {
     event.preventDefault();
     values.forEach((value) => {
       axios
-        .put(`http://localhost:5005/ram/${value.id}`, value)
+        .put(`http://localhost:5000/indiceAntutu/${value.id}`, value)
         .then((response) => {
           console.info(response.data);
         })

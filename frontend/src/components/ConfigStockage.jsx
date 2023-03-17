@@ -6,7 +6,7 @@ export default function ConfigStockage() {
   const [values, setValues] = useState([]);
 
   useEffect(() => {
-    axios.get("http://localhost:5005/stockage").then((response) => {
+    axios.get("http://localhost:5000/stockage").then((response) => {
       setValues(response.data);
     });
   }, []);
@@ -23,7 +23,7 @@ export default function ConfigStockage() {
     event.preventDefault();
     values.forEach((value) => {
       axios
-        .put(`http://localhost:5005/stockage/${value.id}`, value)
+        .put(`http://localhost:5000/stockage/${value.id}`, value)
         .then((response) => {
           console.info(response.data);
         })

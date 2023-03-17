@@ -13,35 +13,35 @@ export default function ConfigRAM() {
       <div className="row">
         <span>
           <input className="gate" id="move" type="text" value="30" />
-          <label for="class">1</label>
+          <label htmlFor="class">1</label>
         </span>
         <span>
           <input className="gate" id="move" type="text" value="40" />
-          <label for="element">2</label>
+          <label htmlFor="element">2</label>
         </span>
         <span>
           <input className="gate" id="move" type="text" value="54" />
-          <label for="move">3</label>
+          <label htmlFor="move">3</label>
         </span>
         <span>
           <input className="gate" id="move" type="text" value="0" />
-          <label for="move">4</label>
+          <label htmlFor="move">4</label>
         </span>
         <span>
           <input className="gate" id="move" type="text" value="0" />
-          <label for="move">6</label>
+          <label htmlFor="move">6</label>
         </span>
         <span>
           <input className="gate" id="move" type="text" value="0" />
-          <label for="move">8</label>
+          <label htmlFor="move">8</label>
         </span>
         <span>
           <input className="gate" id="move" type="text" value="0" />
-          <label for="move">12</label>
+          <label htmlFor="move">12</label>
         </span>
         <span>
           <input className="gate" id="move" type="text" value="0" />
-          <label for="move">16</label>
+          <label htmlFor="move">16</label>
         </span>
       </div>
       {/* <div className="row">
@@ -52,7 +52,7 @@ export default function ConfigRAM() {
             type="text"
             placeholder="Do you speak it?"
           />
-          <label for="english">English</label>
+          <label htmlFor="english">English</label>
         </span>
         <span>
           <input
@@ -61,7 +61,7 @@ export default function ConfigRAM() {
             type="text"
             placeholder="A Royale with cheese?"
           />
-          <label for="burger">Burger</label>
+          <label htmlFor="burger">Burger</label>
         </span>
         <span>
           <input
@@ -70,7 +70,7 @@ export default function ConfigRAM() {
             type="text"
             placeholder="Bad Mother****er"
           />
-          <label for="wallet">Wallet</label>
+          <label htmlFor="wallet">Wallet</label>
         </span>
       </div> */}
       {/* <div className="row">
@@ -81,7 +81,7 @@ export default function ConfigRAM() {
             type="text"
             placeholder="Fund me!"
           />
-          <label for="card">Credit Card</label>
+          <label htmlFor="card">Credit Card</label>
         </span>
         <span>
           <input
@@ -90,7 +90,7 @@ export default function ConfigRAM() {
             type="text"
             placeholder="Month Day, Year"
           />
-          <label for="expires">Expires</label>
+          <label htmlFor="expires">Expires</label>
         </span>
         <span>
           <input
@@ -99,7 +99,7 @@ export default function ConfigRAM() {
             type="text"
             placeholder="Public"
           />
-          <label for="security">Security Code</label>
+          <label htmlFor="security">Security Code</label>
         </span>
       </div> */}
       <div className="register2">
