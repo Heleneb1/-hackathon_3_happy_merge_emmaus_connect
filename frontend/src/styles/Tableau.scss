@@ -2,7 +2,7 @@
   display: flex;
   justify-content: center;
   position: relative;
-  top: 160px;
+  top: 60px;
   .containerTableau {
     display: flex;
     flex-direction: row;
@@ -16,6 +16,7 @@
     .containerForm {
       display: flex;
       flex-direction: column;
+      align-items: center;
       .inputForm {
         width: 329px;
         height: 26px;
@@ -37,6 +38,9 @@
       font-family: "Barlow-regular";
       cursor: pointer;
     }
+    .buttonForm:hover {
+      background-color: #233d8d;
+    }
   }
 }
 
@@ -45,7 +49,11 @@
   text-shadow: none;
   font-family: "Barlow-regular";
 }
+
 .divButtonTab {
   display: flex;
   flex-direction: column;
+  font-family: "Barlow-regular";
+  color: #233d8d;
+  font-weight: bold;
 }
