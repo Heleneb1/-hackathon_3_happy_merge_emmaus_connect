@@ -3,7 +3,6 @@ import { Link } from "react-router-dom";
 import axios from "axios";
 import Header from "../components/Header";
 import emmauslogo from "../assets/emmaus.png";
-import Header from "../components/Header";
 
 export default function Calculatrice() {
   const [AntinputValue, setAntInputValue] = useState("");

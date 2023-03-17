@@ -47,6 +47,7 @@ router.get("/ponderation/:id", ponderationControllers.read);
 router.put("/ponderation/:id", ponderationControllers.edit);
 router.post("/ponderation", ponderationControllers.add);
 router.delete("/ponderation/:id", ponderationControllers.destroy);
+
 router.get("/configmin", configminControllers.browse);
 router.get("/configmin/:id", configminControllers.read);
 router.put("/configmin/:id", configminControllers.edit);
