@@ -45,6 +45,7 @@ class PhoneManager extends AbstractManager {
         phone.reseau,
         phone.etat,
         phone.categorie,
+        phone.id,
       ]
     );
   }
