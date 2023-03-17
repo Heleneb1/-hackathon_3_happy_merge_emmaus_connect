@@ -5,7 +5,7 @@ export default function ConfigMini() {
   const [values, setValues] = useState([]);
 
   useEffect(() => {
-    axios.get("http://localhost:5005/categories").then((response) => {
+    axios.get("http://localhost:5000/categories").then((response) => {
       setValues(response.data);
     });
   }, []);
@@ -22,7 +22,7 @@ export default function ConfigMini() {
     event.preventDefault();
     axios
       .put(
-        `http://localhost:5005/categories/${id}`,
+        `http://localhost:5000/categories/${id}`,
         values.find((val) => val.id === id)
       )
       .then((response) => {

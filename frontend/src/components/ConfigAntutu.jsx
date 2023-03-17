@@ -5,7 +5,7 @@ export default function ConfigAntutu() {
   const [values, setValues] = useState([]);
 
   useEffect(() => {
-    axios.get("http://localhost:5005/indiceantutu").then((response) => {
+    axios.get("http://localhost:5000/indiceantutu").then((response) => {
       setValues(response.data);
     });
   }, []);
@@ -22,7 +22,7 @@ export default function ConfigAntutu() {
     event.preventDefault();
     axios
       .put(
-        `http://localhost:5005/indiceantutu/${id}`,
+        `http://localhost:5000/indiceantutu/${id}`,
         values.find((val) => val.id === id)
       )
       .then((response) => {
