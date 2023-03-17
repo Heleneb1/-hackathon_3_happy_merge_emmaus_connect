@@ -14,12 +14,12 @@ function Tableau() {
     try {
       const response = await axios.post("http://localhost:5000/phones", data);
       console.log("Données soumises avec succès:", response.data);
-      setMessage("Données soumises avec succès !");
+      setMessage("Données enregistrées avec succès !");
       reset();
     } catch (error) {
       // eslint-disable-next-line no-console
       console.error("Erreur lors de la soumission des données:", error);
-      setMessage("Données soumises avec succès !");
+      setMessage("Données enregistrées avec succès !");
     }
   };
 
@@ -94,11 +94,11 @@ function Tableau() {
               <option value="4">Reconditionné</option>
               <option value="5">Réparable</option>
             </select>
-          </form>
-          <div className="divButtonTab">
             <input className="buttonForm" type="submit" />
-            {message && <p className="confirmationMessage">{message}</p>}
-          </div>
+            <div className="divButtonTab">
+              {message && <p className="confirmationMessage">{message}</p>}
+            </div>
+          </form>
         </div>
       </div>
     </div>
