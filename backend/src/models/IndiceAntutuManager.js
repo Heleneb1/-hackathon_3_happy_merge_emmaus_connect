@@ -7,14 +7,14 @@ class IndiceAntutu extends AbstractManager {
 
   insert(indiceantutu) {
     return this.database.query(
-      `insert into ${this.table} (ant_min, ant_max, valA) values (?,?,?)`,
+      `insert into ${this.table} (ant_min, ant_max, valA) values (?, ?, ?)`,
       [indiceantutu.ant_min, indiceantutu.ant_max, indiceantutu.valA]
     );
   }
 
   update(indiceantutu) {
     return this.database.query(
-      `update ${this.table} set ant_min = ? , ant_max = ? , valA = ?  where id = ?`,
+      `update indiceantutu set ant_min = ? , ant_max = ? , valA = ?  where id = ?`,
       [
         indiceantutu.ant_min,
         indiceantutu.ant_max,

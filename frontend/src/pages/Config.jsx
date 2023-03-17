@@ -1,4 +1,4 @@
-import ConfigMini from "@components/ConfigMemoire";
+import ConfigMini from "../components/ConfigMemoire";
 
 export default function Config() {
   return (

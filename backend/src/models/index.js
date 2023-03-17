@@ -59,6 +59,9 @@ models.etat.setDatabase(pool);
 models.configmin = new ConfigminManager();
 models.configmin.setDatabase(pool);
 
+models.indiceantutu = new IndiceAntutuManager();
+models.indiceantutu.setDatabase(pool);
+
 // bonus: use a proxy to personalize error message,
 // when asking for a non existing model
 

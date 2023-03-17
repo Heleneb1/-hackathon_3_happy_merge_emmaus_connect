@@ -5,7 +5,7 @@
 //   const [values, setValues] = useState([]);
 
 //   useEffect(() => {
-//     axios.get("http://localhost:5000/configmin").then((response) => {
+//     axios.get("http://localhost:5000/ram").then((response) => {
 //       setValues(response.data);
 //     });
 //   }, []);
@@ -22,7 +22,7 @@
 //     event.preventDefault();
 //     axios
 //       .put(
-//         `http://localhost:5000/configmin/${id}`,
+//         `http://localhost:5000/ram/${id}`,
 //         values.find((val) => val.id === id)
 //       )
 //       .then((response) => {
@@ -44,20 +44,6 @@
 //             <li key={value.id}>
 //               <input
 //                 type="text"
-//                 value={value.android}
-//                 onChange={(event) =>
-//                   handleValueChange(value.id, "android", event.target.value)
-//                 }
-//               />
-//               <input
-//                 type="text"
-//                 value={value.ram}
-//                 onChange={(event) =>
-//                   handleValueChange(value.id, "ram", event.target.value)
-//                 }
-//               />
-//               <input
-//                 type="text"
 //                 value={value.memoire}
 //                 onChange={(event) =>
 //                   handleValueChange(value.id, "memoire", event.target.value)
@@ -65,16 +51,9 @@
 //               />
 //               <input
 //                 type="text"
-//                 value={value.ecran}
+//                 value={value.valM}
 //                 onChange={(event) =>
-//                   handleValueChange(value.id, "ecran", event.target.value)
-//                 }
-//               />
-//               <input
-//                 type="text"
-//                 value={value.reseau}
-//                 onChange={(event) =>
-//                   handleValueChange(value.id, "reseau", event.target.value)
+//                   handleValueChange(value.id, "valM", event.target.value)
 //                 }
 //               />
 //               <button
